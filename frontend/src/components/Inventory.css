@@ -1,0 +1,101 @@
+.inventory-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.inventory-container {
+  background: rgba(0, 0, 0, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 400px;
+}
+
+.inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.inventory-header h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.inventory-slot {
+  width: 80px;
+  height: 80px;
+  background: rgba(50, 50, 50, 0.9);
+  border: 2px solid rgba(100, 100, 100, 0.8);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s;
+  font-size: 32px;
+}
+
+.inventory-slot:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(70, 70, 70, 0.9);
+}
+
+.inventory-slot.filled {
+  border-color: rgba(100, 200, 255, 0.8);
+}
+
+.item-emoji {
+  font-size: 32px;
+}
+
+.item-count {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 2px 6px;
+  min-width: 16px;
+  text-align: center;
+}
